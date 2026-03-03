@@ -263,7 +263,7 @@ st.markdown(f"""
 # ═══════════════════════════════════════════════════════════════════
 # CONSTANTES DE DADOS
 # ═══════════════════════════════════════════════════════════════════
-DATA_PATH = ""
+DATA_PATH = "/streamlit_app"
 MESES_PT  = {6:"Jun", 7:"Jul", 8:"Ago", 9:"Set"}
 MES_ORD   = {"Jun":6, "Jul":7, "Ago":8, "Set":9}
 TIPO_MAP  = {"InterIlhas":"Inter-Ilhas", "Territoriais":"Territoriais", "Internacionais":"Internacionais"}
