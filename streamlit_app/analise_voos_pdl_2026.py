@@ -604,8 +604,7 @@ st.markdown(f"""
   <h4>📈 Tendência Geral do Tráfego</h4>
   <p>O aeroporto de Ponta Delgada registou um <b>{'crescimento' if dt>0 else 'redução'} de {abs(dt):.1f}%</b>
   no total de movimentos aéreos no verão de 2026 face a 2025, passando de <b>{t25:,}</b> para
-  <b>{t26:,} voos</b> entre Junho e Setembro. Este comportamento reflete a consolidação da posição
-  estratégica dos Açores enquanto destino turístico de referência no Atlântico Norte.</p>
+  <b>{t26:,} voos</b> entre Junho e Setembro..</p>
 </div>
 <div class="ibox">
   <h4>🌍 Conectividade Internacional</h4>
