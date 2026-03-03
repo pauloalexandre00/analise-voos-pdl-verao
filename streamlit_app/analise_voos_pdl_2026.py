@@ -263,7 +263,9 @@ st.markdown(f"""
 # ═══════════════════════════════════════════════════════════════════
 # CONSTANTES DE DADOS
 # ═══════════════════════════════════════════════════════════════════
-DATA_PATH = "/streamlit_app"
+
+BASE_PATH = os.path.dirname(__file__)
+
 MESES_PT  = {6:"Jun", 7:"Jul", 8:"Ago", 9:"Set"}
 MES_ORD   = {"Jun":6, "Jul":7, "Ago":8, "Set":9}
 TIPO_MAP  = {"InterIlhas":"Inter-Ilhas", "Territoriais":"Territoriais", "Internacionais":"Internacionais"}
@@ -273,8 +275,8 @@ TIPO_MAP  = {"InterIlhas":"Inter-Ilhas", "Territoriais":"Territoriais", "Interna
 # ═══════════════════════════════════════════════════════════════════
 @st.cache_data
 def load_data():
-    df_v = pd.read_csv(os.path.join(DATA_PATH, "numero_voos.csv"))
-    df_a = pd.read_csv(os.path.join(DATA_PATH, "detalhe_voos_2026.csv"))
+    df_v = pd.read_csv(os.path.join(BASE_PATH, "numero_voos.csv"))
+    df_a = pd.read_csv(os.path.join(BASE_PATH, "detalhe_voos_2026.csv"))
     df_v["MesNome"]   = df_v["Mes"].map(MESES_PT)
     df_v["TipoLabel"] = df_v["TipoVoo"].map(TIPO_MAP)
     df_a["date"]      = pd.to_datetime(df_a["date"])
